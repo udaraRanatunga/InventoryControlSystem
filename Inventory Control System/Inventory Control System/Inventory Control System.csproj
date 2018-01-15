@@ -1,0 +1,662 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EC5CCB47-FBCE-4F23-925B-F6B0B69A488C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Inventory_Control_System</RootNamespace>
+    <AssemblyName>Inventory Control System</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Users\Udara Ranatunga\Desktop\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ProductName>Inventory Control System</ProductName>
+    <PublisherName>Udara Ranatunga</PublisherName>
+    <SuiteName>ICS</SuiteName>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>F11F49C9DB7309179A3DA9A902DF4556D0D20E72</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>Inventory Control System_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Dapper, Version=1.50.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dapper.1.50.4\lib\net451\Dapper.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="IntelliSMSDotNet, Version=4.6.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\IntelliSMSDotNet.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\MetroFramework.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\MetroFramework.Fonts.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BestSeller.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BestSeller.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BestSeller.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BestSeller.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BestSeller.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BestSeller.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="BestSellerItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BestSellerItem.Designer.cs">
+      <DependentUpon>BestSellerItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BestSellerReport_Result.cs">
+      <DependentUpon>BestSeller.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Customer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customer.Designer.cs">
+      <DependentUpon>Customer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomerMenu.Designer.cs">
+      <DependentUpon>CustomerMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase.cs" />
+    <Compile Include="DBCustomer.cs" />
+    <Compile Include="DBDelivery.cs" />
+    <Compile Include="DBGRN.cs" />
+    <Compile Include="DBGRN_Item_reference.cs" />
+    <Compile Include="DBLogin.cs" />
+    <Compile Include="DBPurchaseReturn.cs" />
+    <Compile Include="DBPurchaseReturns_Item_reference.cs" />
+    <Compile Include="DBPurchases.cs" />
+    <Compile Include="DBPurchase_Item_reference.cs" />
+    <Compile Include="DBSales.cs" />
+    <Compile Include="DBSalesReturns.cs" />
+    <Compile Include="DBSalesReturns_Item_reference.cs" />
+    <Compile Include="DBSales_Item_reference.cs" />
+    <Compile Include="DBSystemUsers.cs" />
+    <Compile Include="Deliveries.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Deliveries.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Deliveries.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Deliveries.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Deliveries.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Deliveries.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="DeliveryReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeliveryReport.Designer.cs">
+      <DependentUpon>DeliveryReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeliveryReport_Result.cs">
+      <DependentUpon>Deliveries.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetPurchaseReport_Result.cs">
+      <DependentUpon>PurchasesModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetSalesReport_Result.cs">
+      <DependentUpon>SalesModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="InventoryDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InventoryDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DBItem.cs" />
+    <Compile Include="DBSupplier.cs" />
+    <Compile Include="Delivery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Delivery.Designer.cs">
+      <DependentUpon>Delivery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Generate GRN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Generate GRN.Designer.cs">
+      <DependentUpon>Generate GRN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Items.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Items.Designer.cs">
+      <DependentUpon>Items.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Orders.cs" />
+    <Compile Include="OrdersDetail.cs" />
+    <Compile Include="PlaceOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PlaceOrder.Designer.cs">
+      <DependentUpon>PlaceOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PrintForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrintForm.Designer.cs">
+      <DependentUpon>PrintForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PrintPurchaseOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrintPurchaseOrder.Designer.cs">
+      <DependentUpon>PrintPurchaseOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase Order.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Purchase Order.Designer.cs">
+      <DependentUpon>Purchase Order.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase Report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Purchase Report.Designer.cs">
+      <DependentUpon>Purchase Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase Returns.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Purchase Returns.Designer.cs">
+      <DependentUpon>Purchase Returns.cs</DependentUpon>
+    </Compile>
+    <Compile Include="smsgateway.cs" />
+    <Compile Include="StockModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StockModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="StockModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StockModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="StockModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StockModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="StockStatusReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StockStatusReport.Designer.cs">
+      <DependentUpon>StockStatusReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PurchasesModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PurchasesModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PurchasesModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PurchasesModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PurchasesModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PurchasesModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Sales Orders.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sales Orders.Designer.cs">
+      <DependentUpon>Sales Orders.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sales Returns.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sales Returns.Designer.cs">
+      <DependentUpon>Sales Returns.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SalesModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SalesModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SalesModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SalesModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SalesModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SalesModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="SalesReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SalesReport.Designer.cs">
+      <DependentUpon>SalesReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StockStatusReport_Result.cs">
+      <DependentUpon>StockModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Suppliers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Suppliers.Designer.cs">
+      <DependentUpon>Suppliers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateCustomer.Designer.cs">
+      <DependentUpon>UpdateCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserMenu.Designer.cs">
+      <DependentUpon>UserMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SystemUsers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SystemUsers.Designer.cs">
+      <DependentUpon>SystemUsers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports.Designer.cs">
+      <DependentUpon>Reports.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManagerMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManagerMenu.Designer.cs">
+      <DependentUpon>ManagerMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewSOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewSOrder.Designer.cs">
+      <DependentUpon>ViewSOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Welcome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Welcome.Designer.cs">
+      <DependentUpon>Welcome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="BestSellerItem.rdlc" />
+    <EmbeddedResource Include="BestSellerItem.resx">
+      <DependentUpon>BestSellerItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customer.resx">
+      <DependentUpon>Customer.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerMenu.resx">
+      <DependentUpon>CustomerMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Delivery.rdlc" />
+    <EmbeddedResource Include="Delivery.resx">
+      <DependentUpon>Delivery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeliveryReport.resx">
+      <DependentUpon>DeliveryReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Generate GRN.resx">
+      <DependentUpon>Generate GRN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Items.resx">
+      <DependentUpon>Items.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PlaceOrder.resx">
+      <DependentUpon>PlaceOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrintForm.resx">
+      <DependentUpon>PrintForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrintPurchaseOrder.resx">
+      <DependentUpon>PrintPurchaseOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrintPurchaseReceipt.rdlc" />
+    <EmbeddedResource Include="Purchase Order.resx">
+      <DependentUpon>Purchase Order.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Purchase Report.resx">
+      <DependentUpon>Purchase Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Purchase Returns.resx">
+      <DependentUpon>Purchase Returns.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PurchaseReport.rdlc" />
+    <EmbeddedResource Include="StockStatus.rdlc" />
+    <EmbeddedResource Include="StockStatusReport.resx">
+      <DependentUpon>StockStatusReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sales Orders.resx">
+      <DependentUpon>Sales Orders.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sales Returns.resx">
+      <DependentUpon>Sales Returns.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SalesReport.rdlc" />
+    <EmbeddedResource Include="SalesReport.resx">
+      <DependentUpon>SalesReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Suppliers.resx">
+      <DependentUpon>Suppliers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SystemUsers.resx">
+      <DependentUpon>SystemUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManagerMenu.resx">
+      <DependentUpon>ManagerMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports.resx">
+      <DependentUpon>Reports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateCustomer.resx">
+      <DependentUpon>UpdateCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserMenu.resx">
+      <DependentUpon>UserMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewSOrder.resx">
+      <DependentUpon>ViewSOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Welcome.resx">
+      <DependentUpon>Welcome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EntityDeploy Include="Deliveries.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Deliveries.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <EntityDeploy Include="BestSeller.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>BestSeller.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="BestSeller.edmx.diagram">
+      <DependentUpon>BestSeller.edmx</DependentUpon>
+    </None>
+    <None Include="Deliveries.edmx.diagram">
+      <DependentUpon>Deliveries.edmx</DependentUpon>
+    </None>
+    <None Include="Inventory Control System_TemporaryKey.pfx" />
+    <None Include="InventoryDataSet2.xsc">
+      <DependentUpon>InventoryDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="InventoryDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>InventoryDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="InventoryDataSet2.xss">
+      <DependentUpon>InventoryDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\BestSellerReport_Result.datasource" />
+    <None Include="Properties\DataSources\DeliveryReport_Result.datasource" />
+    <None Include="Properties\DataSources\GetOrderReports_Result.datasource" />
+    <None Include="Properties\DataSources\GetOrderReports_Result1.datasource" />
+    <None Include="Properties\DataSources\GetPurchaseReports_Result.datasource" />
+    <None Include="Properties\DataSources\GetPurchaseReport_Result.datasource" />
+    <None Include="Properties\DataSources\GetSalesReport_Result.datasource" />
+    <None Include="Properties\DataSources\InventoryDataSet.datasource" />
+    <None Include="Properties\DataSources\InventoryEntities.datasource" />
+    <None Include="Properties\DataSources\Orders.datasource" />
+    <None Include="Properties\DataSources\OrdersDetail.datasource" />
+    <None Include="Properties\DataSources\SalesReport1.datasource" />
+    <None Include="Properties\DataSources\StockStatusReport_Result.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EntityDeploy Include="SalesModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>SalesModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <EntityDeploy Include="PurchasesModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>PurchasesModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="PurchasesModel.edmx.diagram">
+      <DependentUpon>PurchasesModel.edmx</DependentUpon>
+    </None>
+    <None Include="SalesModel.edmx.diagram">
+      <DependentUpon>SalesModel.edmx</DependentUpon>
+    </None>
+    <EntityDeploy Include="StockModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>StockModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="StockModel.edmx.diagram">
+      <DependentUpon>StockModel.edmx</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="BestSeller.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>BestSeller.edmx</DependentUpon>
+      <LastGenOutput>BestSeller.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="BestSeller.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>BestSeller.edmx</DependentUpon>
+      <LastGenOutput>BestSeller.cs</LastGenOutput>
+    </Content>
+    <Content Include="Deliveries.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Deliveries.edmx</DependentUpon>
+      <LastGenOutput>Deliveries.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Deliveries.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Deliveries.edmx</DependentUpon>
+      <LastGenOutput>Deliveries.cs</LastGenOutput>
+    </Content>
+    <Content Include="MetroFramework.txt" />
+    <Content Include="PurchasesModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>PurchasesModel.edmx</DependentUpon>
+      <LastGenOutput>PurchasesModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="PurchasesModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>PurchasesModel.edmx</DependentUpon>
+      <LastGenOutput>PurchasesModel.cs</LastGenOutput>
+    </Content>
+    <None Include="Resources\if_Change_edit_options_pencil_settings_tools_write_1886543.png" />
+    <None Include="Resources\if_Cart_ecommerce_shop_commerce_supermarket_trolley_shopping_1886549.png" />
+    <None Include="Resources\if_Check_interface_ui_Mark_Ok_user_web_1886534.png" />
+    <None Include="Resources\if_Business_graph_pie_chart_revenue_business_growth_graph_growth_chart_1886556.png" />
+    <None Include="Resources\if_Check_interface_ui_Mark_Ok_user_web_18865341.png" />
+    <None Include="Resources\if_Checklist_clipboard_inventory_list_report_tasks_todo_1886533.png" />
+    <None Include="Resources\icons8-supplier.png" />
+    <None Include="Resources\icons8-delivered.png" />
+    <None Include="Resources\icons8-return-purchase.png" />
+    <None Include="Resources\icons8-product.png" />
+    <None Include="Resources\icons8-create-document.png" />
+    <None Include="Resources\logo.png" />
+    <None Include="Resources\logo1.png" />
+    <None Include="Resources\logo2.png" />
+    <None Include="Resources\logo2 %282%29.jpg" />
+    <None Include="Resources\icons8-user.png" />
+    <None Include="Resources\icons8-cancel.png" />
+    <None Include="Resources\if_Key_379460.png" />
+    <None Include="Resources\if_Key_379460 %282%29.png" />
+    <None Include="Resources\key-circle-blue-64.png" />
+    <None Include="Resources\badge.png" />
+    <None Include="Resources\sale.png" />
+    <None Include="Resources\package.png" />
+    <None Include="Resources\delivery-truck.png" />
+    <None Include="Resources\badge1.png" />
+    <None Include="Resources\shopping-bag.png" />
+    <Content Include="SalesModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>SalesModel.edmx</DependentUpon>
+      <LastGenOutput>SalesModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="SalesModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>SalesModel.edmx</DependentUpon>
+      <LastGenOutput>SalesModel.cs</LastGenOutput>
+    </Content>
+    <Content Include="StockModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>StockModel.edmx</DependentUpon>
+      <LastGenOutput>StockModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="StockModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>StockModel.edmx</DependentUpon>
+      <LastGenOutput>StockModel.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
